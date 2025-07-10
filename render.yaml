@@ -1,9 +1,8 @@
 services:
   - type: web
     name: Everest
-    runtime: python
-    buildCommand: pip install -r requirments.txt
+    env: python
+    buildCommand: ""
     startCommand: gunicorn app:app
-    envVars:
-      -key: FLASK_ENV
-      value: production
+    region: oregon
+    plan: free
