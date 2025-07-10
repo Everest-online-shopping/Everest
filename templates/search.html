@@ -118,14 +118,18 @@
 
         </div>
         <div style="float: left; margin-top: 30px; padding: 1rem; padding-top: 120px; padding-left: 2rem;">
-            <h2>Search Results for "{{ query }}"</h2>
+            <h2 style="margin-top: 60px;">Search Results for "{{ query }}"</h2>
             {% if results %}
             <ul>
                 {% for product in results %}
                 <li style="margin: 10px;">
                     <img src="{{ product.image }}" width="100">
-                    <strong style="padding-left: 20px; ">{{ product.name }}</strong> - AFN {{ product.price }}
-                    <a href="/product/{{ product.id }}" class="button">View</a>
+                    <div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem;">
+                        <strong
+                            style="padding-left: 20px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 70%; margin: 0; ">{{
+                            product.name }}</strong> - AFN {{ product.price }}
+                        <a href="/product/{{ product.id }}" class="button">View</a>
+                    </div>
                 </li>
                 {% endfor %}
             </ul>
