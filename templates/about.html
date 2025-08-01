@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="Viewport" content=" width=800">
-    <title>Everest | Toys</title>
+    <title>Bamyo | Tools</title>
     <link rel="stylesheet" href="/static/style.css">
 
     <style>
-        #everesth1 {
+        #Bamyoh1 {
             color: rgb(0, 0, 0);
             border: 0.0625rem solid none;
             background-color: rgb(149, 224, 197);
@@ -17,7 +17,7 @@
             border-radius: 4px;
         }
 
-        #everestdiv {
+        #Bamyodiv {
             width: 77%;
             float: left;
             margin-bottom: 25px;
@@ -70,10 +70,10 @@
 </head>
 
 <body>
-    <header>
-        <div id="fixed">
-            <div id="everestdiv">
-                <header id="everesth1"><b>Everest</b></header>
+    <div id="fixed">
+        <header>
+            <div id="Bamyodiv">
+                <header id="Bamyoh1"><b>Bamyo</b></header>
             </div>
             <div>
                 <a href="/search"><button id="searchbut"><svg aria-hidden="true" data-prefix="fas" data-icon="search"
@@ -98,29 +98,47 @@
                 <a style="color: black; text-decoration: none; margin-right: 25px;" href="/"> Dresses</a>
                 <a style="color: black; text-decoration: none;margin-right: 25px;" href="/skirts"> Skirts</a>
                 <a style="color: black; text-decoration: none;margin-right: 25px;" href="/tops"> Tops</a>
-                <a style="color: black; text-decoration: none;margin-right: 25px;" href="/shoes"> Shoes</a>
-                <a style="color: black; text-decoration: none;margin-right: 25px;" href="/scarfs">Scarfs</a>
-                <a style="color: black; text-decoration: none;margin-right: 25px;" href="/beauty"> Beauty</a>
-                <a style="color: black; text-decoration: none;margin-right: 25px;" href="/toys"> Toys</a>
-                <a style="color: black; text-decoration: none;margin-right: 25px;" href="/tools"> Tools</a>
+                <a style="color: black; text-decoration: none;margin-right: 25px;" href="/blouse"> Blouse</a>
+                <a style="color: black; text-decoration: none;margin-right: 25px;" href="/occasion"> Occasion</a>
+                <a style="color: black; text-decoration: none;margin-right: 25px;" href="/blazer"> Blazer</a>
+                <a style="color: black; text-decoration: none;margin-right: 25px;" href="/jeans"> Jeans</a>
+                <a style="color: black; text-decoration: none;margin-right: 25px; text-decoration: underline 1px;"
+                    href="/about"> About us</a>
             </div>
 
-        </div>
-        <div style="margin-top: 50px; float:left; padding-right: 50%; padding-left: 2.5rem; font-size: 17px;">
-            <h2 style="padding-top: 100px;">Toy products</h2>
-            <h1 style="margin-top: 90px;">Coming Soon!</h1>
-        </div>
-        <main id="productlist">
+    </div>
+    <div style="margin-top: 50px; float:left; padding-right: 50%; padding-left: 2.5rem; font-size: 17px;">
+        <h2 style="padding-top:100px ;">About us</h2>
+        <p>
+            **Bamyo** یک فروشگاه آنلاین است که با عشق و دقت برای ارائه‌ی شیک‌ترین و باکیفیت‌ترین لباس‌های زنانه
+            ساخته شده است.
+            ما باور داریم که زیبایی در سادگی و کیفیت نهفته است. هدف ما این است که هر زن بتواند با قیمت مناسب، لباسی
+            بپوشد که او را خاص، راحت و مطمئن نشان دهد.
+        </p>
+        <p>
+        <h1 style="font-size: 17px;"> 🔹 ** Bamyo چرا** </h1>
+        چون ما به کیفیت اهمیت می‌دهیم، به مد روز توجه داریم، و مشتری برای ما اولویت است.
+        ما محصولاتی را انتخاب می‌کنیم که خودمان به آن باور داریم – از پارچه گرفته تا دوخت.
 
-            {% for product in products %}
-            <div class="product">
-                <h3>{{ product.name }}</h3>
-                <img src="{{ product.image }}" alt="{{ product.name }}">
-                <p>AFN {{ product.price }}</p>
-                <a href="/product/{{ product.id }}" class="button">View</a>
-            </div>
-            {% endfor %}
-        </main>
+        <h1 style="font-size: 17px;"> 🚚 **ارسال سریع و پشتیبانی ۲۴/۷** </h1>
+        ما همیشه در کنار شما هستیم – برای خرید آسان و مطمئن.
+
+
+
+        <h1 style="font-size: 17px;"> ## تماس با ما </h1>
+        <p>📱 Whatsapp:<a href="https://wa.me/93776681226?text=Hello%2C+I+would+like+to+place+an+order+on+Bamyo.">
+                0776681226**</a></p>
+        <p>📷 Instagram:<a href="https://www.instagram.com/bamyo_brand">@bamyo_brand</a></p>
+        <p>👤 Admin: (Murtaza Reazaie)</p>
+
+
+        <h1
+            style=" font-size: 17px;  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+            بامیو طراحی شده برای صلیقه‌های خاص </h1>
+
+        ---
+        </p>
+    </div>
 
 </body>
 

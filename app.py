@@ -5,7 +5,7 @@ from flask import Flask, render_template, request, redirect, url_for, session
 from flask import Flask, render_template, redirect, url_for, request, session
 
 app = Flask(__name__)
-app.secret_key = 'everest_secret_key'
+app.secret_key = 'Bamyo_secret_key'
 
 
 def load_products():
@@ -27,26 +27,38 @@ products = [
 # صفحه Scarfs
 
 
-@app.route('/scarfs')
-def scarfs():
-    return render_template('scarfs.html')
+@app.route('/occasion')
+def occasion():
+    products = load_products()
+    occasion_products = [p for p in products if p.get(
+        "category", "").lower() == "occasion"]
+    print("Occasion Products Found:", occasion_products)
+    return render_template('occasion.html', products=occasion_products)
 
 
-@app.route('/beauty')
-def beauty():
-    return render_template('beauty.html')
+@app.route('/blazer')
+def blazer():
+    products = load_products()
+    blazer_products = [p for p in products if p.get(
+        "category", "").lower() == "blazer"]
+    print("blazer Products Found:", blazer_products)
+    return render_template('blazer.html', products=blazer_products)
 
 
-@app.route('/toys')
-def toys():
-    return render_template('toys.html')
+@app.route('/jeans')
+def jeans():
+    products = load_products()
+    jeans_products = [p for p in products if p.get(
+        "category", "").lower() == "jeans"]
+    print("Jeans Products Found:", jeans_products)
+    return render_template('jeans.html', products=jeans_products)
 
 
 # صفحه Tools
 
-@app.route('/tools')
-def tools():
-    return render_template('tools.html')
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 
 @app.route("/search")
@@ -67,13 +79,13 @@ def index():
     return render_template('index.html', products=clothes_products)
 
 
-@app.route('/shoes')
-def shoes():
+@app.route('/blouse')
+def blouse():
     products = load_products()
-    shoes_products = [p for p in products if p.get(
-        "category", "").lower() == "shoes"]
-    print("Shoes Products Found:", shoes_products)
-    return render_template('shoes.html', products=shoes_products)
+    blouse_products = [p for p in products if p.get(
+        "category", "").lower() == "blouse"]
+    print("Blouse Products Found:", blouse_products)
+    return render_template('blouse.html', products=blouse_products)
 
 
 @app.route('/tops')
